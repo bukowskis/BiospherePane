@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E00F1B9A14C1D97300601D0B /* Biosphere.h in Headers */ = {isa = PBXBuildFile; fileRef = E00F1B9814C1D97300601D0B /* Biosphere.h */; };
+		E00F1B9B14C1D97300601D0B /* Biosphere.m in Sources */ = {isa = PBXBuildFile; fileRef = E00F1B9914C1D97300601D0B /* Biosphere.m */; };
+		E02DD2FE14C1FDAE000D55F2 /* NodeNameFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = E02DD2FC14C1FDAE000D55F2 /* NodeNameFormatter.h */; };
+		E02DD2FF14C1FDAE000D55F2 /* NodeNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DD2FD14C1FDAE000D55F2 /* NodeNameFormatter.m */; };
+		E041204F14C1D9F900C85820 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = E041204E14C1D9F900C85820 /* Biosphere.icns */; };
+		E0694C5D14C1D4F100D48BEF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0694C5C14C1D4F100D48BEF /* Cocoa.framework */; };
+		E0694C5F14C1D4F100D48BEF /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0694C5E14C1D4F100D48BEF /* PreferencePanes.framework */; };
+		E0694C7214C1D4F100D48BEF /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0694C7014C1D4F100D48BEF /* Biosphere.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E00F1B9814C1D97300601D0B /* Biosphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Biosphere.h; path = Classes/Biosphere.h; sourceTree = "<group>"; };
+		E00F1B9914C1D97300601D0B /* Biosphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Biosphere.m; path = Classes/Biosphere.m; sourceTree = "<group>"; };
+		E02DD2FC14C1FDAE000D55F2 /* NodeNameFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeNameFormatter.h; path = Biosphere/Classes/NodeNameFormatter.h; sourceTree = "<group>"; };
+		E02DD2FD14C1FDAE000D55F2 /* NodeNameFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NodeNameFormatter.m; path = Biosphere/Classes/NodeNameFormatter.m; sourceTree = "<group>"; };
+		E041204E14C1D9F900C85820 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Biosphere.icns; path = Biosphere/Images/Biosphere.icns; sourceTree = "<group>"; };
+		E0694C5914C1D4F100D48BEF /* Biosphere.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Biosphere.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0694C5C14C1D4F100D48BEF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E0694C5E14C1D4F100D48BEF /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		E0694C6114C1D4F100D48BEF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E0694C6214C1D4F100D48BEF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E0694C6314C1D4F100D48BEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E0694C6614C1D4F100D48BEF /* Biosphere-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Biosphere-Info.plist"; sourceTree = "<group>"; };
+		E0694C6A14C1D4F100D48BEF /* Biosphere-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Biosphere-Prefix.pch"; sourceTree = "<group>"; };
+		E0694C7114C1D4F100D48BEF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Biosphere.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0694C5414C1D4F100D48BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0694C5D14C1D4F100D48BEF /* Cocoa.framework in Frameworks */,
+				E0694C5F14C1D4F100D48BEF /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E00F1B9414C1D92A00601D0B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E041204E14C1D9F900C85820 /* Biosphere.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E00F1B9514C1D93C00601D0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0694C7014C1D4F100D48BEF /* Biosphere.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E02DD2FA14C1FD7D000D55F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E02DD2FC14C1FDAE000D55F2 /* NodeNameFormatter.h */,
+				E02DD2FD14C1FDAE000D55F2 /* NodeNameFormatter.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E0694C4C14C1D4F100D48BEF = {
+			isa = PBXGroup;
+			children = (
+				E0694C6414C1D4F100D48BEF /* Controllers */,
+				E02DD2FA14C1FD7D000D55F2 /* Models */,
+				E00F1B9514C1D93C00601D0B /* Views */,
+				E0694C6514C1D4F100D48BEF /* Config */,
+				E00F1B9414C1D92A00601D0B /* Images */,
+				E0694C5B14C1D4F100D48BEF /* Frameworks */,
+				E0694C5A14C1D4F100D48BEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0694C5A14C1D4F100D48BEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0694C5914C1D4F100D48BEF /* Biosphere.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0694C5B14C1D4F100D48BEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0694C5C14C1D4F100D48BEF /* Cocoa.framework */,
+				E0694C5E14C1D4F100D48BEF /* PreferencePanes.framework */,
+				E0694C6014C1D4F100D48BEF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0694C6014C1D4F100D48BEF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0694C6114C1D4F100D48BEF /* AppKit.framework */,
+				E0694C6214C1D4F100D48BEF /* CoreData.framework */,
+				E0694C6314C1D4F100D48BEF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E0694C6414C1D4F100D48BEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E00F1B9814C1D97300601D0B /* Biosphere.h */,
+				E00F1B9914C1D97300601D0B /* Biosphere.m */,
+			);
+			name = Controllers;
+			path = Biosphere;
+			sourceTree = "<group>";
+		};
+		E0694C6514C1D4F100D48BEF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E0694C6614C1D4F100D48BEF /* Biosphere-Info.plist */,
+				E0694C6A14C1D4F100D48BEF /* Biosphere-Prefix.pch */,
+			);
+			name = Config;
+			path = Biosphere;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E0694C5514C1D4F100D48BEF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E00F1B9A14C1D97300601D0B /* Biosphere.h in Headers */,
+				E02DD2FE14C1FDAE000D55F2 /* NodeNameFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E0694C5814C1D4F100D48BEF /* Biosphere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0694C7514C1D4F100D48BEF /* Build configuration list for PBXNativeTarget "Biosphere" */;
+			buildPhases = (
+				E0694C5314C1D4F100D48BEF /* Sources */,
+				E0694C5414C1D4F100D48BEF /* Frameworks */,
+				E0694C5514C1D4F100D48BEF /* Headers */,
+				E0694C5614C1D4F100D48BEF /* Resources */,
+				E0694C5714C1D4F100D48BEF /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Biosphere;
+			productName = Biosphere;
+			productReference = E0694C5914C1D4F100D48BEF /* Biosphere.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0694C4E14C1D4F100D48BEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E0694C5114C1D4F100D48BEF /* Build configuration list for PBXProject "Biosphere" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E0694C4C14C1D4F100D48BEF;
+			productRefGroup = E0694C5A14C1D4F100D48BEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0694C5814C1D4F100D48BEF /* Biosphere */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0694C5614C1D4F100D48BEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0694C7214C1D4F100D48BEF /* Biosphere.xib in Resources */,
+				E041204F14C1D9F900C85820 /* Biosphere.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		E0694C5714C1D4F100D48BEF /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0694C5314C1D4F100D48BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E00F1B9B14C1D97300601D0B /* Biosphere.m in Sources */,
+				E02DD2FF14C1FDAE000D55F2 /* NodeNameFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E0694C7014C1D4F100D48BEF /* Biosphere.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0694C7114C1D4F100D48BEF /* en */,
+			);
+			name = Biosphere.xib;
+			path = Biosphere;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0694C7314C1D4F100D48BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E0694C7414C1D4F100D48BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E0694C7614C1D4F100D48BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biosphere/Biosphere-Prefix.pch";
+				INFOPLIST_FILE = "Biosphere/Biosphere-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		E0694C7714C1D4F100D48BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biosphere/Biosphere-Prefix.pch";
+				INFOPLIST_FILE = "Biosphere/Biosphere-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0694C5114C1D4F100D48BEF /* Build configuration list for PBXProject "Biosphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0694C7314C1D4F100D48BEF /* Debug */,
+				E0694C7414C1D4F100D48BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0694C7514C1D4F100D48BEF /* Build configuration list for PBXNativeTarget "Biosphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0694C7614C1D4F100D48BEF /* Debug */,
+				E0694C7714C1D4F100D48BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0694C4E14C1D4F100D48BEF /* Project object */;
+}
