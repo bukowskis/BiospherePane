@@ -11,6 +11,7 @@
   __strong NSTextField *chefserverURLTextField;
   __strong NSTextField *cheferverURLLabel;
   __strong NSTextField *chefVersionLabel;
+  __strong NSTextField *knifeCommandLabel;
   __strong NSButton *installChefButton;
   __strong NSProgressIndicator *spinner;
   __strong NSTextField *installChefInfoLabel;
@@ -28,6 +29,7 @@
 @property (strong) IBOutlet NSTextField *chefserverURLTextField;
 @property (strong) IBOutlet NSTextField *cheferverURLLabel;
 @property (strong) IBOutlet NSTextField *chefVersionLabel;
+@property (strong) IBOutlet NSTextField *knifeCommandLabel;
 @property (strong) IBOutlet NSProgressIndicator *spinner;
 @property (strong) IBOutlet NSButton *installChefButton;
 @property (strong) IBOutlet NSTextField *installChefInfoLabel;

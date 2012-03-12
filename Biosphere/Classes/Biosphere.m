@@ -8,7 +8,7 @@
 @synthesize installChefInfoLabel, installChefButton;
 @synthesize validationDigestLabel, validationDeleteButton, biospherePathLabel, versionLabel;
 @synthesize nodeNameTextField, chefserverURLTextField;
-@synthesize nodeNameLabel, cheferverURLLabel;
+@synthesize nodeNameLabel, cheferverURLLabel, knifeCommandLabel;
 @synthesize chefVersionLabel, spinner;
 
 // Initialization
@@ -25,7 +25,7 @@
 
 - (void) setupUI {
   biospherePathLabel.stringValue = [self biosphereDirectory];
-  versionLabel.stringValue = @"v0.2.0"; // Somehow BundleVersion always returns "11.0". So hardcode it.
+  versionLabel.stringValue = @"v0.2.1"; // Somehow BundleVersion always returns "11.0". So hardcode it.
   [self setupNodeName];
   [self setupChefserverURL];
 }
@@ -152,6 +152,7 @@ NSLog(@"sss");
   }
   nodeNameLabel.stringValue = [self nodeName];
   cheferverURLLabel.stringValue = [self chefserverURL];
+  knifeCommandLabel.stringValue = [NSString stringWithFormat:@"/usr/bin/knife node run_list add %@ \"role[biosphere]\" --config %@", nodeName, [self knifeConfigFile]];
   [sshKeyPopup selectItemWithTitle:sshKeyFilename];
 }
 
