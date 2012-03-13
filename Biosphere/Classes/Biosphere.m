@@ -25,7 +25,7 @@
 
 - (void) setupUI {
   biospherePathLabel.stringValue = [self biosphereDirectory];
-  versionLabel.stringValue = @"v0.2.1"; // Somehow BundleVersion always returns "11.0". So hardcode it.
+  versionLabel.stringValue = @"v0.2.2"; // Somehow BundleVersion always returns "11.0". So hardcode it.
   [self setupNodeName];
   [self setupChefserverURL];
 }
@@ -94,7 +94,6 @@
 }
 
 - (IBAction) removeValidationKey:sender {
-NSLog(@"sss");
   NSString *empty = @"";
   [empty writeToFile:[self validationFile] atomically:YES encoding:NSUTF8StringEncoding error:NULL];
   [self loadConfiguration:self];
@@ -127,6 +126,10 @@ NSLog(@"sss");
 - (IBAction) runChefClient:sender {
   NSDictionary *error = [NSDictionary new];
   NSString *command = [@"/usr/bin/chef-client --config " stringByAppendingString:[self knifeConfigFile]];
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  if (![fileManager fileExistsAtPath:[self bootstrappedConfigFile]]) {
+    command = [command stringByAppendingFormat:@" && %@ welcome", [self bioExecutableFile]];
+  }
   NSString *script =  @"tell application \"Terminal\"\nactivate\ndo script \"COMMAND\"\nend tell\n";
   NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:[script stringByReplacingOccurrencesOfString:@"COMMAND" withString:command]];
   [appleScript executeAndReturnError:&error];
@@ -206,6 +209,10 @@ NSLog(@"sss");
   return [NSHomeDirectory() stringByAppendingPathComponent:@".biosphere"];
 }
 
+- (NSString*) biosphereBinDirectory {
+  return [[self biosphereDirectory] stringByAppendingPathComponent:@"core/bin"];
+}
+
 - (NSString*) biosphereConfigDirectory {
   return [[self biosphereDirectory] stringByAppendingPathComponent:@"config"];
 }
@@ -224,6 +231,10 @@ NSLog(@"sss");
 
 // Files
 
+- (NSString*) bioExecutableFile {
+  return [[self biosphereBinDirectory] stringByAppendingPathComponent:@"bio"];
+}
+
 - (NSString*) nodeNameFile {
   return [[self biosphereConfigDirectory] stringByAppendingPathComponent:@"chef_node_name"];
 }
@@ -234,6 +245,10 @@ NSLog(@"sss");
 
 - (NSString*) sshKeyConfigFile {
   return [[self biosphereConfigDirectory] stringByAppendingPathComponent:@"ssh_key_filename"];
+}
+
+- (NSString*) bootstrappedConfigFile {
+  return [[self biosphereConfigDirectory] stringByAppendingPathComponent:@"biosphere_bootstrapped"];
 }
 
 - (NSString*) knifeConfigFile {
