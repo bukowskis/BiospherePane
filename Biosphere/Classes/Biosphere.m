@@ -4,12 +4,14 @@
 
 @implementation Biosphere
 
-@synthesize sshKeyPopup, runBiosphereButton;
-@synthesize installChefInfoLabel, installChefButton;
-@synthesize validationDigestLabel, validationDeleteButton, biospherePathLabel, versionLabel;
+@synthesize sshKeyPopup, runBiosphereButton, sshHeaderLabel;
+@synthesize installChefInfoLabel, installChefButton, cheferverURLHeaderLabel;
+@synthesize validationDigestLabel, validationDeleteButton, validationImportButton, biospherePathLabel, versionLabel;
 @synthesize nodeNameTextField, chefserverURLTextField;
 @synthesize nodeNameLabel, cheferverURLLabel, knifeCommandLabel;
-@synthesize chefVersionLabel, spinner;
+@synthesize chefVersionLabel, spinner, helpButton;
+@synthesize digestHelpPopover, importHelpPopover, importHelpPath, sshHelpPopover, sshHelpPath;
+@synthesize subscriptionHelpPopover;
 
 // Initialization
 
@@ -25,7 +27,9 @@
 
 - (void) setupUI {
   biospherePathLabel.stringValue = [self biosphereDirectory];
-  versionLabel.stringValue = @"v0.2.2"; // Somehow BundleVersion always returns "11.0". So hardcode it.
+  versionLabel.stringValue = @"v0.2.3"; // Somehow BundleVersion always returns "11.0". So hardcode it.
+  importHelpPath.stringValue = [[self validationFile] stringByReplacingOccurrencesOfString:NSHomeDirectory() withString:@"~"];
+  sshHelpPath.stringValue = [[self sshKeyConfigFile] stringByReplacingOccurrencesOfString:NSHomeDirectory() withString:@"~"];
   [self setupNodeName];
   [self setupChefserverURL];
 }
@@ -289,6 +293,30 @@
  NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
  for (int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) [output appendFormat:@"%02x", digest[i]];
  return output;
+}
+
+// Help Controll
+
+- (IBAction) toggleHelp:sender {
+  if ([self.digestHelpPopover isShown]) {
+    [self hideHelp];
+  } else {
+    [self showHelp];
+  }
+}
+
+- (void) showHelp {
+  [self.digestHelpPopover showRelativeToRect:[self.validationDigestLabel bounds] ofView:self.validationDigestLabel preferredEdge:NSMinYEdge];
+  [self.importHelpPopover showRelativeToRect:[self.validationImportButton bounds] ofView:self.validationImportButton preferredEdge:NSMinYEdge];
+  [self.sshHelpPopover showRelativeToRect:[self.sshHeaderLabel bounds] ofView:self.sshHeaderLabel preferredEdge:NSMinXEdge];
+  [self.subscriptionHelpPopover showRelativeToRect:[self.cheferverURLHeaderLabel bounds] ofView:self.cheferverURLHeaderLabel preferredEdge:NSMinXEdge];
+}
+
+- (void) hideHelp {
+  [self.digestHelpPopover performClose:self];
+  [self.importHelpPopover performClose:self];
+  [self.sshHelpPopover performClose:self];
+  [self.subscriptionHelpPopover performClose:self];
 }
 
 @end

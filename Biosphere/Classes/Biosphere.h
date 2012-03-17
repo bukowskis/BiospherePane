@@ -6,10 +6,13 @@
   __strong NSTextField *versionLabel;
   __strong NSTextField *validationDigestLabel;
   __strong NSButton *validationDeleteButton;
+  __strong NSButton *validationImportButton;
+  __strong NSTextField *sshHeaderLabel;
   __strong NSTextField *nodeNameLabel;
   __strong NSTextField *nodeNameTextField;
   __strong NSTextField *chefserverURLTextField;
   __strong NSTextField *cheferverURLLabel;
+  __strong NSTextField *cheferverURLHeaderLabel;
   __strong NSTextField *chefVersionLabel;
   __strong NSTextField *knifeCommandLabel;
   __strong NSButton *installChefButton;
@@ -17,6 +20,13 @@
   __strong NSTextField *installChefInfoLabel;
   __strong NSButton *runBiosphereButton;
   __strong NSPopUpButton *sshKeyPopup;
+  __strong NSButton *helpButton;
+  __strong NSPopover *digestHelpPopover;
+  __strong NSPopover *importHelpPopover;
+  __strong NSTextField *importHelpPath;
+  __strong NSTextField *sshHelpPath;
+  __strong NSPopover *sshHelpPopover;
+  __strong NSPopover *subscriptionHelpPopover;
   
 }
 
@@ -25,9 +35,12 @@
 @property (strong) IBOutlet NSTextField *nodeNameLabel;
 @property (strong) IBOutlet NSTextField *validationDigestLabel;
 @property (strong) IBOutlet NSButton *validationDeleteButton;
+@property (strong) IBOutlet NSButton *validationImportButton;
+@property (strong) IBOutlet NSTextField *sshHeaderLabel;
 @property (strong) IBOutlet NSTextField *nodeNameTextField;
 @property (strong) IBOutlet NSTextField *chefserverURLTextField;
 @property (strong) IBOutlet NSTextField *cheferverURLLabel;
+@property (strong) IBOutlet NSTextField *cheferverURLHeaderLabel;
 @property (strong) IBOutlet NSTextField *chefVersionLabel;
 @property (strong) IBOutlet NSTextField *knifeCommandLabel;
 @property (strong) IBOutlet NSProgressIndicator *spinner;
@@ -35,6 +48,13 @@
 @property (strong) IBOutlet NSTextField *installChefInfoLabel;
 @property (strong) IBOutlet NSButton *runBiosphereButton;
 @property (strong) IBOutlet NSPopUpButton *sshKeyPopup;
+@property (strong) IBOutlet NSButton *helpButton;
+@property (strong) IBOutlet NSPopover *digestHelpPopover;
+@property (strong) IBOutlet NSPopover *importHelpPopover;
+@property (strong) IBOutlet NSTextField *importHelpPath;
+@property (strong) IBOutlet NSTextField *sshHelpPath;
+@property (strong) IBOutlet NSPopover *sshHelpPopover;
+@property (strong) IBOutlet NSPopover *subscriptionHelpPopover;
 
 - (void) mainViewDidLoad;
 - (void) setupUI;
@@ -47,6 +67,7 @@
 - (IBAction)chooseValidationKey:sender;
 - (IBAction) removeValidationKey:sender;
 - (BOOL) isChefGemInstalled;
+- (IBAction) installChefGem:sender;
 - (IBAction) runChefClient:sender;
 - (void) loadConfiguration:sender;
 - (IBAction) saveConfiguration:sender;
@@ -66,5 +87,6 @@
 - (NSString*) validationFile;
 - (void) ensureDirectories;
 - (void) ensureAssets;
+- (IBAction)toggleHelp:sender;
 
 @end
