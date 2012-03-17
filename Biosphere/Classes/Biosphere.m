@@ -128,7 +128,7 @@
   NSString *command = [@"/usr/bin/chef-client --config " stringByAppendingString:[self knifeConfigFile]];
   NSFileManager *fileManager = [NSFileManager defaultManager];
   if (![fileManager fileExistsAtPath:[self bootstrappedConfigFile]]) {
-    command = [command stringByAppendingFormat:@" && %@ welcome", [self bioExecutableFile]];
+    command = [command stringByAppendingFormat:@" && test -x ~/.biosphere/core/bin/bio && %@ welcome", [self bioExecutableFile], [self bioExecutableFile]];
   }
   NSString *script =  @"tell application \"Terminal\"\nactivate\ndo script \"COMMAND\"\nend tell\n";
   NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:[script stringByReplacingOccurrencesOfString:@"COMMAND" withString:command]];
