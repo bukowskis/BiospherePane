@@ -4,7 +4,7 @@ A Mac OS X Lion Preference Pane that turns your computer into a [Opscode Chef](h
 
 ### Screenshot
 
-[screenshot](https://raw.github.com/funkensturm/BiospherePane/master/screenshot.png)
+![screenshot](https://raw.github.com/funkensturm/BiospherePane/master/screenshot.png)
 
 ### Copyright
 
